@@ -37,6 +37,14 @@ app.get("/", function(req, res){
         "message":"Hello json"
         })}
         });
+
+        // 9)Get Route Parameter Input from the Client
+
+app.get("/:word/echo", function(req, res){ 
+    const {word} = req.params;
+    res.json({echo: word})
+    
+    })
         
         
 
