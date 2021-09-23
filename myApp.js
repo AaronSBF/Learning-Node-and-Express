@@ -1,5 +1,11 @@
 var express = require('express');
 var app = express();
+//Use body-parser to Parse POST Requests
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 
 console.log('Hello world');
 
